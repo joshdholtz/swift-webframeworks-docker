@@ -1,0 +1,7 @@
+zewoexample:
+  build: .
+  volumes:
+    - ./app
+  ports:
+    - "8080:80"
+  command: bash -c "swift build && ls -a"
