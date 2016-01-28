@@ -1,0 +1,14 @@
+swiftradata:
+  image: ubuntu
+  volumes:
+    - /app
+
+swiftra:
+  build: .
+  volumes:
+    - ./app:/code
+  volumes_from:
+    - swiftradata
+  ports:
+    - "8080:8080"
+  command: bash -c "cp Package.swift /app && cp -r Sources /app ; cd /app ; swift build; .build/debug/app"
