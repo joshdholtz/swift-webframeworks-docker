@@ -1,5 +1,5 @@
 # swift-webframeworks-docker
-A Docker container used for spinning up different Swift web frameworks
+Docker containers used for spinning up different Swift web frameworks
 
 ## Why
  - Very few commands to spin up a development container
