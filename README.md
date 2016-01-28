@@ -12,11 +12,15 @@ A Docker container used for spinning up different Swift web frameworks
   1. `cd swiftra`
   2. `docker-compose build`
   3. `docker-compose up`
+    - This rebuilds the project (by using `swift build`) and then runs the build 
+    - Rerun this command after making changes to the project 
   4. Hit machine url on port 8080
     - ex: http://192.168.99.100:8080
 3. Run Epoch
   1. `cd epoch`
   2. `docker-compose build`
   3. `docker-compose up`
+    - This rebuilds the project (by using `swift build`) and then runs the build 
+    - Rerun this command after making changes to the project 
   4. Hit machine url on port 8080
     - ex: http://192.168.99.100:8080
