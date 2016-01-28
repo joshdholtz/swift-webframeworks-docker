@@ -1,14 +1,14 @@
-data:
+epochdata:
   image: ubuntu
   volumes:
     - /app
 
-web:
+epoch:
   build: .
   volumes:
     - ./app:/code
   volumes_from:
-    - data
+    - epochdata
   ports:
     - "8080:8080"
   command: bash -c "cp Package.swift /app && cp -r Sources /app ; cd /app ; swift build; .build/debug/app"
