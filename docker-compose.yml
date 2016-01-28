@@ -1,7 +1,14 @@
-zewoexample:
+data:
+  image: ubuntu
+  volumes:
+    - /app
+
+web:
   build: .
   volumes:
-    - ./app
+    - ./app:/code
+  volumes_from:
+    - data
   ports:
-    - "8080:80"
-  command: bash -c "swift build && ls -a"
+    - "8080:8080"
+  command: bash -c "cp Package.swift /app && cp -r Sources /app ; cd /app ; swift build; .build/debug/app"
