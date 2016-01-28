@@ -1,6 +1,13 @@
 # swift-webframeworks-docker
 A Docker container used for spinning up different Swift web frameworks
 
+## Why
+ - Very few commands to spin up a development container
+  - Great for getting other team members setup
+ - Don't need to install framework dependencies on your host OS
+  - ex: `Epoch` needs `libvenice`, `http-parser`, and `uri-parser`
+ - Because you don't have to spend 8 hours doing this same thing that I had to do :innocent:
+
 ## Which frameworks are included
 - [x] [Swiftra](https://github.com/takebayashi/swiftra)
 - [x] [Epoch](https://github.com/Zewo/Epoch)
