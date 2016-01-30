@@ -31,22 +31,8 @@ let info = Connection.Info(host: "epochdb", database: "postgres", port: 5432, us
 let conn = Connection(info)
 
 do {
-    try conn.open()
-
-    try conn.execute(
-      "CREATE TABLE  IF NOT EXISTS users (id SERIAL PRIMARY KEY, name TEXT NOT NULL)"
-    )
-
-    let createUsers:[String] = [
-      "Josh",
-      "Jason",
-      "Nick"
-    ]
-
-    // for userName in createUsers {
-    //   try conn.execute("INSERT INTO USERS (name) VALUES($1)", parameters: userName)
-    // }
-
+  try conn.open()
+  try EpochMigrations.up(conn)
 } catch {
     // debug(error)
 }
