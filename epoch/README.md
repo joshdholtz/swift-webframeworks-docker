@@ -1,7 +1,23 @@
 # Epoch Example
-Uses `Epoch` web framework with `PostgreSQL`
+Run `Epoch` web framework with `PostgreSQL` in a self contained Docker container
+
+## Setup
+1. Install [Docker](https://docs.docker.com/engine/installation/)
+2. Clone/fork repo
+3. Run Epoch
+  1. `cd epoch`
+  2. `docker-compose build`
+  3. `docker-compose up`
+    - This rebuilds the project (by using `swift build`) and then runs the build
+    - Rerun this command after making changes to the project
+  4. Hit machine url on port 8080
+    - ex: http://192.168.99.100:8080
+
 
 ## Fun Bits
+- [Epoch web framework](https://github.com/Zewo/Epoch)
+- [PostgreSQL database adapter](https://github.com/Zewo/PostgreSQL)
+- Manage migrations using `Migrations` protocol
 
 ### Migrations
 Uses a `Migrations` protocol to manage which migrations have been run and which haven't.
