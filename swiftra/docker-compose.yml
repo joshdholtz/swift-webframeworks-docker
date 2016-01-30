@@ -11,4 +11,4 @@ swiftra:
     - swiftradata
   ports:
     - "8080:8080"
-  command: bash -c "cp Package.swift /app && cp -r Sources /app ; cd /app ; swift build; .build/debug/app"
+  command: bash -c "rm -rf /app/Sources 2> /dev/null ; cp Package.swift /app && cp -r Sources /app ; cd /app ; swift build; .build/debug/app"
