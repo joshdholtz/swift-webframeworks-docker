@@ -4,9 +4,21 @@ Uses `Epoch` web framework with `PostgreSQL`
 ## Fun Bits
 
 ### Migrations
-Using a `Migrations` to manage which migrations have been run and which haven't.
+Uses a `Migrations` protocol to manage which migrations have been run and which haven't.
 
 #### Example usage
+
+```swift
+let info = Connection.Info(host: "epochdb", database: "postgres", port: 5432, user: "postgres", password: nil)
+let conn = Connection(info)
+
+do {
+  try conn.open()
+  try EpochMigrations.up(conn)
+} catch {
+}
+```
+
 ```swift
 enum EpochMigrations: Int, Migrations {
 	case CreateUsers
