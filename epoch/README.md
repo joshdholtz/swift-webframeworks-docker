@@ -19,6 +19,11 @@ Run `Epoch` web framework with `PostgreSQL` in a self contained Docker container
 - [PostgreSQL database adapter](https://github.com/Zewo/PostgreSQL)
 - Manage migrations using `Migrations` protocol
 
+## Things To Do Yet
+- Create routes for POST, PUT, and DELETE
+- Write a light ORM layer on top of `PostgreSQL`
+- Use a connection pool because so bad right now using one connection for whole server
+
 ### Migrations
 Uses a `Migrations` protocol to manage which migrations have been run and which haven't.
 
