@@ -17,7 +17,10 @@ Run `Epoch` web framework with `PostgreSQL` in a self contained Docker container
 ## Fun Bits
 - [Epoch web framework](https://github.com/Zewo/Epoch)
 - [PostgreSQL database adapter](https://github.com/Zewo/PostgreSQL)
+- The actual implementation - [main.swift](./app/Sources/main.swift)
 - Manage migrations using `Migrations` protocol
+  - The `Migrations` protocol - [Migrations.swift](./app/Sources/Migrations.swift)
+  - The actual migrations - [EpochMigrations.swift](./app/Sources/EpochMigrations.swift)
 
 ## Things To Do Yet
 - Create routes for POST, PUT, and DELETE
