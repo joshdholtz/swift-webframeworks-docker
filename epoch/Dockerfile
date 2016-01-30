@@ -16,3 +16,4 @@ RUN apt-get update
 RUN apt-get -q -y --force-yes install libvenice
 RUN apt-get -q -y --force-yes install http-parser
 RUN apt-get -q -y --force-yes install uri-parser
+RUN apt-get -q -y --force-yes install libpq-dev
