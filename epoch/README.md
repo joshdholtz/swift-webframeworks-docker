@@ -1,3 +1,13 @@
+# Epoch Example
+Uses `Epoch` web framework with `PostgreSQL`
+
+## Fun Bits
+
+### Migrations
+Using a `Migrations` to manage which migrations have been run and which haven't.
+
+#### Example usage
+```swift
 enum EpochMigrations: Int, Migrations {
 	case CreateUsers
 	case InsertUsers
@@ -15,3 +25,4 @@ enum EpochMigrations: Int, Migrations {
 		}
 	}
 }
+```

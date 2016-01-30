@@ -23,10 +23,11 @@ func debug(items: Any...) {
 }
 
 // let processInfo = NSProcessInfo()
-let processInfo = NSProcessInfo.processInfo()
-let env = processInfo.environment
-debug("Env: \(env)")
+// let processInfo = NSProcessInfo.processInfo()
+// let env = processInfo.environment
+// debug("Env: \(env)")
 
+// Get DB connection
 let info = Connection.Info(host: "epochdb", database: "postgres", port: 5432, user: "postgres", password: nil)
 let conn = Connection(info)
 
